@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import excel from '@/libs/excel'
+import excel from '@/libs/excel.js'
 export default {
   name: 'export-excel',
   data () {
