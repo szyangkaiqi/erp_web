@@ -118,10 +118,13 @@ export default {
         try {
           getUserInfo(state.token)
             .then(res => {
-              const data = res.data;
+              const data = res.data.data;
+              data.access = ["super_admin", "admin"];
+              data.avatar =
+                "https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png";
               commit("setAvatar", data.avatar);
-              commit("setUserName", data.name);
-              commit("setUserId", data.user_id);
+              commit("setUserName", data.userName);
+              commit("setUserId", data.userId);
               commit("setAccess", data.access);
               commit("setHasGetInfo", true);
               resolve(data);

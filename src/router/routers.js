@@ -153,6 +153,15 @@ export default [
         component: () => import('@/view/components/org-tree')
       },
       {
+        path: 'handson_table_page',
+        name: 'handson_table_page',
+        meta: {
+          icon: 'ios-people',
+          title: 'Handsontable'
+        },
+        component: () => import('@/view/components/handson-table')
+      },
+      {
         path: 'tree_table_page',
         name: 'tree_table_page',
         meta: {
